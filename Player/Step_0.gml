@@ -48,10 +48,11 @@ if place_meeting(x, y + yspeed, obj_dressor) == true {
 	yspeed = 0;
 }
 
-// move player
+// move playe
 x += xspeed;
 y += yspeed;
 
+//set facing places
 if xspeed > 0 { face = RIGHT; }
 else if xspeed < 0 { face = LEFT; }
 
@@ -62,9 +63,9 @@ if yspeed > 0 {face = DOWN};
 if yspeed < 0 {face = UP};
 
 if xspeed != 0 || yspeed != 0 {
-    sprite_index = sprite_walk[face]; // Moving = use walking sprite
+    sprite_index = sprite_walk[face];
 } else {
-    sprite_index = sprite_idle[face]; // Not moving = idle sprite
+    sprite_index = sprite_idle[face];
 }
 
 
